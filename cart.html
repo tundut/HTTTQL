@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Apple</title>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -22,13 +22,15 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li id="lg-bag" ><a href="cart.html" class="active"><i class="fa fa-shopping-bag"></i></a></li>
-                    <a href="#" id="close"><i class="far fa-times"></i></a>
+                    <li id="lg-bag"><a class="active" href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li id="lg-bag"><a href="login.html"><i class="fa fa-user"></i></a></li>
+                    <a href="#" id="close"><i class="fa fa-times"></i></a>
                 </ul>
             </div>
 
             <div id="mobile">
                 <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+                <a href="login.html"><i class="fa fa-user"></i></a>
                 <i id="bar" class="fas fa-outdent"></i>
             </div>
         </section>
@@ -78,7 +80,7 @@
                         <td><strong>$0</strong></td>
                     </tr>
                 </table>
-                <button class="normal">Proceed to checkout</button>
+                <button class="normal" onclick="window.location.href='payment.html'">Proceed to checkout</button>
             </div>
         </section>
 
@@ -86,9 +88,9 @@
             <div class="col">
                 <img class="logo" src="img/logo.png" alt="">
                 <h4>Contact</h4>
-                <p><strong>Address: </strong>562 Wellington Road, Street 32, San Francisco</p>
-                <p><strong>Phone: </strong> +01 2222 365 /(+91) 01 2345 6789</p>
-                <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+                <p><strong>Address: </strong>279 Nguyen Tri Phuong St., Ho Chi Minh City</p>
+                <p><strong>Phone: </strong> +0255 123 456 / (+84) 123 456 789</p>
+                <p><strong>Hours: </strong> 9:00 - 16:00, Mon - Sat</p>
                 <div class="follow">
                     <h4>Follow us</h4>
                     <div class="icon">
@@ -127,9 +129,15 @@
                     <img src="img/pay/play.jpg" alt="">
                 </div>
                 <p>Secured Payment Gateways</p>
-                <img src="img/pay/pay.jpg" style="width: 300px;" alt="">
+                <div class="icon-container">
+                    <i class="fa-brands fa-cc-visa" style="color: navy;"></i>
+                    <i class="fa-brands fa-cc-amex" style="color: blue;"></i>
+                    <i class="fa-brands fa-cc-mastercard" style="color: rgb(219, 0, 0);"></i>
+                    <i class="fa-brands fa-cc-discover" style="color: rgb(255, 187, 0);"></i>
+                </div>
             </div>
         </footer>
+
 
         <script src="script.js"></script>
         <script src="cart.js"></script>

@@ -77,6 +77,14 @@ function updateCartQuantity(index, quantity) {
   }
 }
 
+// Xóa sản phẩm theo id khỏi localStorage
+function removeFromCart(id) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart = cart.filter(item => item.id !== id);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCart();
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   renderCart();
 });

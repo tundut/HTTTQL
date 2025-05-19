@@ -2,28 +2,32 @@ const proDetailsData = [
   //Macbook
   {
     id: "mac1",
-    name: "Star Light",
+    name: "Macbook",
+    color: "Star Light",
     category: "mac",
     price: 78,
     image: "img/products/mac/mac1.jpg",
   },
   {
     id: "mac2",
-    name: "Midnight",
+    name: "Macbook",
+    color: "Midnight",
     category: "mac",
     price: 78,
     image: "img/products/mac/mac2.jpg",
   },
   {
     id: "mac3",
-    name: "Space Grey",
+    name: "Macbook",
+    color: "Space Grey",
     category: "mac",
     price: 78,
     image: "img/products/mac/mac3.jpg",
   },
   {
     id: "mac4",
-    name: "Silver",
+    name: "Macbook",
+    color: "Silver",
     category: "mac",
     price: 78,
     image: "img/products/mac/mac4.jpg",
@@ -32,28 +36,32 @@ const proDetailsData = [
   //iphone
   {
     id: "iphone1",
-    name: "Desert Titanium",
+    name: "Iphone 16",
+    color: "Desert Titanium",
     category: "iphone",
     price: 78,
     image: "img/products/iphone/iphone1.jpg",
   },
   {
     id: "iphone2",
-    name: "Natural Titanium",
+    name: "Iphone 16",
+    color: "Natural Titanium",
     category: "iphone",
     price: 78,
     image: "img/products/iphone/iphone2.jpg",
   },
   {
     id: "iphone3",
-    name: "Black Titanium",
+    name: "Iphone 16",
+    color: "Black Titanium",
     category: "iphone",
     price: 78,
     image: "img/products/iphone/iphone3.jpg",
   },
   {
     id: "iphone4",
-    name: "White Titanium",
+    name: "Iphone 16",
+    color: "White Titanium",
     category: "iphone",
     price: 78,
     image: "img/products/iphone/iphone4.jpg",
@@ -73,7 +81,7 @@ function renderProductDetails(products){
             ${products.map((p, i) => `
                 <div class="small-img-col" data-index="${i}">
                     <img src="${p.image}" width="100%" class="small-img" alt="">
-                    <p class="img-caption">${p.name}</p>
+                    <p class="img-caption">${p.color}</p>
                 </div>
             `).join('')}
         </div>
@@ -81,21 +89,12 @@ function renderProductDetails(products){
 
     const detailContainer = document.querySelector('.single-pro-details');
     detailContainer.innerHTML = `
-        <h6>Home / ${mainProduct.category}</h6>
-        <h4>${mainProduct.name}</h4>
+        <h4>${mainProduct.name} - ${mainProduct.color}</h4>
         <h2>$${mainProduct.price}</h2>
-        <select>
-            <option>Select Size</option>
-            <option>XXL</option>
-            <option>XL</option>
-            <option>Large</option>
-            <option>Medium</option>
-            <option>Small</option>
-        </select>
         <input type="number" value="1">
         <button class="normal" id="add-to-cart-btn">Add To Cart</button>
         <h4>Product Details</h4>
-        <span>The best classic T-shirts in the market for men. Premium quality with unique design. Available in all sizes.</span>
+        <span>Apple M2 chip, 13.6″ Liquid Retina display, 8GB RAM, 512GB SSD, FaceTime HD 1080p camera, up to 18h battery life.</span>
     `;
 
     // Bắt sự kiện click ảnh nhỏ
@@ -104,7 +103,7 @@ function renderProductDetails(products){
         col.addEventListener("click", () => {
             MainImg.src = products[i].image;
             mainProduct = products[i]; // ← cập nhật sản phẩm chính
-            detailContainer.querySelector("h4").textContent = products[i].name;
+            detailContainer.querySelector("h4").textContent = products[i].name + " - " + products[i].color;
             detailContainer.querySelector("h2").textContent = `$${products[i].price}`;
         });
     });
