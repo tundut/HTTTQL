@@ -77,6 +77,10 @@ body {
   width: 100%;
 }
 
+.logo {
+  height: 40px;
+}
+
 /* Header */
 #header {
   display: flex;
@@ -90,12 +94,6 @@ body {
   top: 0;
   left: 0;
 }
-
-#header img {
-  height: 40px;
-  width: 100%;
-}
-
 #navbar {
   display: flex;
   align-items: center;
