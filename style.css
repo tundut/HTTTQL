@@ -91,6 +91,11 @@ body {
   left: 0;
 }
 
+#header img {
+  height: 40px;
+  width: 100%;
+}
+
 #navbar {
   display: flex;
   align-items: center;
@@ -531,7 +536,6 @@ footer .copyright {
 .small-img-group {
   display: flex;
   justify-content: space-between;
-  margin-top: -100px;
 }
 .small-img-col {
   flex-basis: 24%;
