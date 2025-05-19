@@ -90,7 +90,7 @@ body {
   background: #e3e6f3;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -969,7 +969,7 @@ footer .copyright {
 /* Login */
 .login-container {
   display: flex;
-  min-height: 100vh;
+  min-height: 90vh;
   justify-content: center;
   align-items: center;
 }
