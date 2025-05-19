@@ -14,3 +14,22 @@ if (close){
     })
 }
 
+function hideNavbar() {
+    const header = document.getElementById('header');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // cuộn xuống & đã cuộn quá 50px → ẩn navbar
+        header.classList.add('hidden');
+      } else {
+        // cuộn lên → hiện navbar
+        header.classList.remove('hidden');
+      }
+      lastScrollY = currentScrollY;
+    });
+  };
+
+hideNavbar();
