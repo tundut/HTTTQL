@@ -884,13 +884,18 @@ footer .copyright {
   box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
 }
 
-.form-wrapperform {
+.form-wrapper form {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
 }
 
-.form-wrapper .section {
+.form-wrapper .section-payment {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.form-wrapper .section-billing {
   flex: 1 1 45%;
   min-width: 300px;
 }
@@ -901,7 +906,7 @@ footer .copyright {
   color: #333;
 }
 
-.section-billing label {
+.form-wrapper label {
   display: block;
   margin-bottom: 6px;
   font-weight: 600;
@@ -909,8 +914,8 @@ footer .copyright {
 }
 
 .section-billing input[type="text"],
-.section-payment input[type="text"],
-.section-billing input[type="email"] {
+.section-billing input[type="email"], 
+.section-payment input[type="text"]{
   width: 100%;
   padding: 10px;
   margin-bottom: 16px;
@@ -922,17 +927,17 @@ footer .copyright {
 }
 
 .icon-container {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   font-size: 26px;
 }
 
-.section-billing .mini-row {
+.form-wrapper .mini-row {
   display: flex;
   gap: 20px;
   margin-bottom: 16px;
 }
 
-.section-billing .mini-col {
+.form-wrapper .mini-col {
   flex: 1 1 50%;
 }
 

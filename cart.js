@@ -5,7 +5,7 @@ function renderCart() {
   tbody.innerHTML = "";
 
   if (cart.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;">Giỏ hàng trống</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;">Empty Cart</td></tr>`;
     updateCartTotals(); // không cần truyền tham số
     return;
   }
