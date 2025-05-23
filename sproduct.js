@@ -8,7 +8,7 @@ function renderProductDetails(product){
     detailContainer.innerHTML = `
         <h2>${product.name}</h2>
         <h2>$${product.price}</h2>
-        <input type="number" value="1">
+        <input type="number" min="1" value="1">
         <button class="normal" id="add-to-cart-btn">Add To Cart</button>
         <h4>Product Details</h4>
         <span>Apple M2 chip, 13.6″ Liquid Retina display, 8GB RAM, 512GB SSD, FaceTime HD 1080p camera, up to 18h battery life.</span>
