@@ -11,7 +11,7 @@ function renderProductDetails(product){
         <input type="number" min="1" value="1">
         <button class="normal" id="add-to-cart-btn">Add To Cart</button>
         <h4>Product Details</h4>
-        <span>Apple M2 chip, 13.6″ Liquid Retina display, 8GB RAM, 512GB SSD, FaceTime HD 1080p camera, up to 18h battery life.</span>
+        <span>The ${product.name} is a high-quality product. It features a sleek design and exceptional performance, making it perfect for your tech needs.</span>
     `;
 
     // Gán lại nút Add to Cart bên trong sau khi render xong

@@ -222,9 +222,10 @@ body {
 }
 #product1 .pro-container-cg {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-top: 20px;
   flex-wrap: wrap;
+  gap: 30px;
 }
 #product1 .pro {
   width: 23%;
