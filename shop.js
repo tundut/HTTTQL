@@ -12,8 +12,10 @@ function renderProducts(products) {
           <span>Apple</span>
           <h5>${product.name}</h5>
           <div class="star">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
           </div>
           <h4>$${product.price}</h4>
