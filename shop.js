@@ -27,27 +27,22 @@ function renderProducts(products) {
 
 window.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const category = urlParams.get("category");
-  //Xử lý URL trang Product
-  if (category) {
-    const categoryBoxes = document.querySelectorAll(".cg-box");
+  const category = urlParams.get("category") ? urlParams.get("category") : "mac";
 
-    categoryBoxes.forEach(box => {
-        const boxCategory = box.getAttribute('data-category');
-        
-        if (boxCategory === category) {
-            categoryBoxes.forEach(b => b.classList.remove("active"));
-            box.classList.add("active");
+  const categoryBoxes = document.querySelectorAll(".cg-box");
 
-            if (typeof renderProducts === "function") {
-            const filtered = productsData.filter(p => p.category === category);
-            renderProducts(filtered);
-            }
-        }
-        });
-    }
-  else {
-    filtered = productsData.filter(p => p.category === "mac");
-    renderProducts(filtered);
-  }
+  categoryBoxes.forEach(box => {
+      const boxCategory = box.getAttribute('data-category');
+      
+      if (boxCategory === category) {
+          categoryBoxes.forEach(b => b.classList.remove("active"));
+          box.classList.add("active");
+
+          if (typeof renderProducts === "function") {
+          const filtered = productsData.filter(p => p.category === category);
+          renderProducts(filtered);
+          }
+      }
+      });
+
 });
